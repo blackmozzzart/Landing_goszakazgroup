@@ -1,0 +1,49 @@
+.btn {
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-basic);
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.btn_radius_m {
+  border-radius: 8px;
+}
+
+.btn_radius_xl {
+  border-radius: 20px;
+}
+
+.btn_size_s {
+  font-size: 16px;
+  line-height: 21px;
+  padding: 8px 16px;
+}
+
+.btn_size_m {
+  font-size: 18px;
+  line-height: 23px;
+  padding: 10px 16px;
+}
+
+.btn_size_l {
+  font-size: 18px;
+  line-height: 23px;
+  padding: 13px 16px;
+}
+
+.btn_variant_dark {
+  background: #5d71dd0d;
+  color: #5d71dd;
+}
+.btn_variant_light {
+  background-color: #ffffff33;
+  color: #fff;
+}
+
+.btn_variant_filled {
+  color: #fff;
+  background-color: #6c7dd8;
+}

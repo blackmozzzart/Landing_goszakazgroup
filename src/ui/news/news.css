@@ -1,0 +1,35 @@
+.news {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  text-decoration: none;
+  width: 100%;
+}
+
+.news + .news {
+  @media screen and (min-width: 1023px), screen and (max-width: 768px) {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--color-dark-10);
+  }
+}
+
+.news__title {
+  color: var(--color-dark);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  @media screen and (max-width: 1024px) {
+    -webkit-line-clamp: 2;
+  }
+
+  &:hover {
+    color: var(--color-blue);
+  }
+}
+
+.news__date {
+  color: var(--color-gray);
+}

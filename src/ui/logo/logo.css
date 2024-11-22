@@ -1,0 +1,61 @@
+.logo {
+  --size: 48px;
+
+  @media screen and (max-width: 768px) {
+    --size: 38px;
+  }
+
+  display: block;
+  height: var(--size);
+  width: var(--size);
+  border-radius: 50%;
+  background-color: var(--color-blue);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    width: 25.96px;
+    height: 25.92px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px 0px #3946882e;
+    transform: rotate(0deg) scale(-1);
+    transform-origin: bottom right;
+    pointer-events: none;
+    animation: rotate 1000ms infinite linear;
+    animation-play-state: paused;
+    left: 0;
+    top: 0;
+
+    @media screen and (max-width: 768px) {
+      left: auto;
+      top: auto;
+      right: 16px;
+      bottom: 16px;
+      width: 15.96px;
+      height: 15.92px;
+    }
+  }
+
+  &:hover::after {
+    animation-play-state: running;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(-1);
+  }
+
+  100% {
+    transform: rotate(365deg) scale(-1);
+  }
+}

@@ -1,0 +1,44 @@
+.typography {
+  font-family: var(--font-basic);
+  font-weight: 400;
+}
+
+.typography_xs {
+  font-size: 14px;
+  line-height: 18px;
+}
+.typography_s {
+  font-size: 16px;
+  line-height: 20.5px;
+}
+
+.typography_m {
+  font-size: 18px;
+  line-height: 23.08px;
+}
+
+.typography_l {
+  line-height: 31px;
+  font-size: 24px;
+
+  @media screen and (max-width: 768px) {
+    line-height: 24px;
+    font-size: 20px;
+  }
+}
+
+.typography_xl {
+  font-size: 30px;
+  line-height: 38.46px;
+  text-align: center;
+}
+
+.text-color_dark {
+  color: var(--color-dark);
+}
+.text-color_white {
+  color: #fff;
+}
+.text-color_gray {
+  color: #2f222266;
+}

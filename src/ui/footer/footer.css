@@ -1,0 +1,36 @@
+.footer {
+  background-color: var(--color-blue-5);
+  padding: 40px 0;
+
+  @media screen and (max-width: 768px) {
+    padding: 24px 0;
+  }
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+}
+
+.footer__nav {
+  margin-top: 40px;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    row-gap: 8px;
+  }
+}
+
+.footer__rights {
+  margin-top: 64px;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 32px;
+    text-align: center;
+  }
+}

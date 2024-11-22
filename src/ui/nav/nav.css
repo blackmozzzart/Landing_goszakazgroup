@@ -1,0 +1,29 @@
+.nav {
+  display: flex;
+  column-gap: 40px;
+}
+
+.nav__link {
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--color-dark);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 4.5px;
+  font-family: var(--font-basic);
+
+  &:hover {
+    color: var(--color-blue);
+  }
+}
+
+.nav__link_active {
+  color: var(--color-blue);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.nav__link_filled {
+  color: var(--color-blue);
+}

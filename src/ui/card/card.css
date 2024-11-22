@@ -1,0 +1,109 @@
+.card {
+  --offsset-x: 30px;
+  --offsset-y: 40px;
+
+  text-decoration: none;
+  background-color: var(--color-blue);
+  border-radius: 20px;
+  max-width: 320px;
+  padding: var(--offsset-y) var(--offsset-x);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 30px;
+  min-height: 400px;
+  position: relative;
+  transition: all var(--transition-time) cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  cursor: pointer;
+  background-size: auto 105%;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    box-shadow: 4px 8px 40px 0px #08186f33;
+    opacity: 0;
+    transition: opacity var(--transition-time) ease-in-out;
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: 1024px) {
+    --offsset-y: 30px;
+    --offsset-x: 20px;
+  }
+
+  @media screen and (max-width: 768px) {
+    --offsset-y: 22px;
+    --offsset-x: 20px;
+  }
+
+  &:hover {
+    background-color: var(--color-white);
+
+    &::before {
+      opacity: 1;
+    }
+
+    .card__date {
+      color: var(--color-gray);
+    }
+
+    .card__btn {
+      color: var(--color-blue);
+      background-color: var(--color-blue-5);
+    }
+
+    .card__label {
+      color: var(--color-dark);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    /* max-width: 100%; */
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.card[style^="background-image:"][style$=".png')"] {
+  background-color: transparent;
+
+  &:hover {
+    @media screen and (hover: hover) {
+      background-size: auto 120%;
+    }
+
+    .card__date {
+      color: var(--color-white);
+    }
+
+    .card__btn {
+      background-color: #ffffff33;
+      color: #fff;
+    }
+
+    .card__label {
+      color: var(--color-white);
+    }
+  }
+}
+
+.card__date {
+  margin-top: auto;
+  color: var(--color-white);
+  transition: color var(--transition-time) ease-in-out;
+}
+
+.card__label {
+  color: var(--color-white);
+  transition: color var(--transition-time) ease-in-out;
+}
+
+.card__btn {
+  transition: all var(--transition-time) ease-in-out;
+}

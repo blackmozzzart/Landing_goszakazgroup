@@ -1,0 +1,13 @@
+.sidebar {
+  min-width: 320px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+
+  @media screen and (max-width: 1024px) {
+    max-width: 100%;
+    min-width: 100%;
+    row-gap: 60px;
+  }
+}
