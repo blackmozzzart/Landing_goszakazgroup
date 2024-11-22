@@ -8,4 +8,14 @@ export default defineConfig({
     injectHTML(),
     postcssNesting()
   ],
+  base: 'https://blackmozzzart.github.io/Landing_goszakazgroup/',
+  build: {
+    rollupOptions: {
+      input: {
+        index: '/index.html',
+        404: '/404.html',
+        inner: '/inner.html',
+      }
+    }
+  }
 });
